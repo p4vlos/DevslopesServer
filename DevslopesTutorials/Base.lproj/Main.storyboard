@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaZ-lb-DzH">
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="19N-uU-8eL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KS9-yv-ZNo">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="voA-A2-AeD" customClass="VideoCell">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="voA-A2-AeD" id="jGI-Kx-YW8">
+                                            <frame key="frameInset" width="343" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-cL-zDi">
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NS3-jr-zuq">
+                                                            <frame key="frameInset" minX="8" minY="8" width="126" height="71.5"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Studio Tutorial For Beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXv-AT-YJt">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="jPf-mk-Plb"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <color key="textColor" red="0.24402739487942429" green="0.24527821045561463" blue="0.2512419871794872" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Learn how to install Android Studio and then go through this tutorial to build you very first app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-Yg-jMb">
+                                                            <frame key="frameInset" minX="142" minY="39" width="177" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="bgb-Z7-fvu"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                                            <color key="textColor" red="0.24402739487942429" green="0.24527821045561463" blue="0.2512419871794872" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="jXv-AT-YJt" secondAttribute="trailing" constant="8" id="IyB-hD-AG2"/>
+                                                        <constraint firstItem="NS3-jr-zuq" firstAttribute="top" secondItem="jfX-cL-zDi" secondAttribute="top" constant="8" id="KuT-X1-7Hk"/>
+                                                        <constraint firstItem="jXv-AT-YJt" firstAttribute="leading" secondItem="jfX-cL-zDi" secondAttribute="leading" constant="142" id="MiP-ko-SfH"/>
+                                                        <constraint firstItem="NS3-jr-zuq" firstAttribute="leading" secondItem="jfX-cL-zDi" secondAttribute="leading" constant="8" id="VOs-uI-hkh"/>
+                                                        <constraint firstItem="jXv-AT-YJt" firstAttribute="top" secondItem="jfX-cL-zDi" secondAttribute="top" constant="8" id="vKA-60-3CV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NS3-jr-zuq" secondAttribute="bottom" constant="8" id="wXX-q5-trr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="jfX-cL-zDi" firstAttribute="leading" secondItem="jGI-Kx-YW8" secondAttribute="leadingMargin" id="7O3-fZ-8Ru"/>
+                                                <constraint firstItem="jfX-cL-zDi" firstAttribute="bottom" secondItem="jGI-Kx-YW8" secondAttribute="bottomMargin" id="JyQ-Vp-GF3"/>
+                                                <constraint firstItem="jfX-cL-zDi" firstAttribute="trailing" secondItem="jGI-Kx-YW8" secondAttribute="trailingMargin" id="aMd-zN-p95"/>
+                                                <constraint firstItem="jfX-cL-zDi" firstAttribute="top" secondItem="jGI-Kx-YW8" secondAttribute="topMargin" id="ae9-7F-Ogx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="cellView" destination="jfX-cL-zDi" id="ADW-eJ-rBa"/>
+                                            <outlet property="descLbl" destination="4ki-Yg-jMb" id="grg-c1-PLR"/>
+                                            <outlet property="thumbImg" destination="NS3-jr-zuq" id="kXX-OJ-1Pc"/>
+                                            <outlet property="titleLbl" destination="jXv-AT-YJt" id="sQ4-nX-GOa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KS9-yv-ZNo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="1Ht-Q2-vMn"/>
+                            <constraint firstItem="HaZ-lb-DzH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="66D-Ij-g83"/>
+                            <constraint firstItem="HaZ-lb-DzH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ggq-93-34E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KS9-yv-ZNo" secondAttribute="bottom" id="PzF-1T-BGV"/>
+                            <constraint firstItem="KS9-yv-ZNo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T14-FA-635"/>
+                            <constraint firstItem="KS9-yv-ZNo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="d7q-ez-zfN"/>
+                            <constraint firstAttribute="trailing" secondItem="HaZ-lb-DzH" secondAttribute="trailing" id="kxa-dU-uf1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
         </scene>
     </scenes>
 </document>
