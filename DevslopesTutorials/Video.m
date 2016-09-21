@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Video.m
 //  DevslopesTutorials
 //
 //  Created by Pavlos Nicolaou on 20/09/2016.
 //  Copyright © 2016 Pavlos Nicolaou. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Video.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
-
+@implementation Video
 
 @end
-

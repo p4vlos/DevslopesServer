@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="voA-A2-AeD" customClass="VideoCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="main" rowHeight="104" id="voA-A2-AeD" customClass="VideoCell">
                                         <rect key="frame" x="0.0" y="28" width="343" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="voA-A2-AeD" id="jGI-Kx-YW8">
@@ -38,8 +38,11 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-cL-zDi">
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NS3-jr-zuq">
-                                                            <frame key="frameInset" minX="8" minY="8" width="126" height="71.5"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NS3-jr-zuq">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="71.5" id="7PU-EV-ok3"/>
+                                                                <constraint firstAttribute="width" constant="126" id="zhV-1V-FXN"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Studio Tutorial For Beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXv-AT-YJt">
                                                             <constraints>
@@ -49,11 +52,7 @@
                                                             <color key="textColor" red="0.24402739487942429" green="0.24527821045561463" blue="0.2512419871794872" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Learn how to install Android Studio and then go through this tutorial to build you very first app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-Yg-jMb">
-                                                            <frame key="frameInset" minX="142" minY="39" width="177" height="40"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="bgb-Z7-fvu"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn how to install Android Studio and then go through this tutorial to build you very first app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-Yg-jMb">
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                             <color key="textColor" red="0.24402739487942429" green="0.24527821045561463" blue="0.2512419871794872" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -61,10 +60,14 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="4ki-Yg-jMb" firstAttribute="leading" secondItem="NS3-jr-zuq" secondAttribute="trailing" constant="8" id="0D6-Rg-gBI"/>
                                                         <constraint firstAttribute="trailing" secondItem="jXv-AT-YJt" secondAttribute="trailing" constant="8" id="IyB-hD-AG2"/>
                                                         <constraint firstItem="NS3-jr-zuq" firstAttribute="top" secondItem="jfX-cL-zDi" secondAttribute="top" constant="8" id="KuT-X1-7Hk"/>
                                                         <constraint firstItem="jXv-AT-YJt" firstAttribute="leading" secondItem="jfX-cL-zDi" secondAttribute="leading" constant="142" id="MiP-ko-SfH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4ki-Yg-jMb" secondAttribute="bottom" id="OzY-vd-XLY"/>
                                                         <constraint firstItem="NS3-jr-zuq" firstAttribute="leading" secondItem="jfX-cL-zDi" secondAttribute="leading" constant="8" id="VOs-uI-hkh"/>
+                                                        <constraint firstItem="4ki-Yg-jMb" firstAttribute="top" secondItem="jfX-cL-zDi" secondAttribute="top" constant="47" id="hzh-E2-5fF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4ki-Yg-jMb" secondAttribute="trailing" id="kXL-Gk-JAm"/>
                                                         <constraint firstItem="jXv-AT-YJt" firstAttribute="top" secondItem="jfX-cL-zDi" secondAttribute="top" constant="8" id="vKA-60-3CV"/>
                                                         <constraint firstAttribute="bottom" secondItem="NS3-jr-zuq" secondAttribute="bottom" constant="8" id="wXX-q5-trr"/>
                                                     </constraints>
@@ -80,10 +83,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="cellView" destination="jfX-cL-zDi" id="ADW-eJ-rBa"/>
-                                            <outlet property="descLbl" destination="4ki-Yg-jMb" id="grg-c1-PLR"/>
-                                            <outlet property="thumbImg" destination="NS3-jr-zuq" id="kXX-OJ-1Pc"/>
-                                            <outlet property="titleLbl" destination="jXv-AT-YJt" id="sQ4-nX-GOa"/>
+                                            <outlet property="cellView" destination="jfX-cL-zDi" id="7Bh-OM-yUA"/>
+                                            <outlet property="descLbl" destination="4ki-Yg-jMb" id="n5l-hb-trr"/>
+                                            <outlet property="thumbImg" destination="NS3-jr-zuq" id="hjH-Rl-XSj"/>
+                                            <outlet property="titleLbl" destination="jXv-AT-YJt" id="tz2-oR-XLB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,6 +103,9 @@
                             <constraint firstAttribute="trailing" secondItem="HaZ-lb-DzH" secondAttribute="trailing" id="kxa-dU-uf1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="KS9-yv-ZNo" id="8YV-7V-GFb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
