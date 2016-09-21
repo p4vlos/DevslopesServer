@@ -105,11 +105,85 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="KS9-yv-ZNo" id="8YV-7V-GFb"/>
+                        <segue destination="oCd-x8-zXB" kind="presentation" identifier="videoVC" id="5S5-R1-ir1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="7b8-rZ-J4k">
+            <objects>
+                <viewController id="oCd-x8-zXB" customClass="VideoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ON1-zl-lMi"/>
+                        <viewControllerLayoutGuide type="bottom" id="u86-ku-6s2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SpH-fp-ny5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-cb-SP0">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="Iks-3I-I53"/>
+                                </constraints>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Studio Tutorial For Beginners" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcu-vf-cEt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="lgE-WF-q27"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.33100961538461537" green="0.33100961538461537" blue="0.33100961538461537" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn how to install Android Studio and then go through this tutorial to build your very first app" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-on-2Is">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yYd-3n-wJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" red="0.33100961540000001" green="0.33100961540000001" blue="0.33100961540000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCi-WE-7te">
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="fsf-1e-OfY"/>
+                                </constraints>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="oCd-x8-zXB" eventType="touchUpInside" id="vb2-Sz-vNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ua0-on-2Is" firstAttribute="top" secondItem="dcu-vf-cEt" secondAttribute="bottom" constant="16" id="AbV-aS-e05"/>
+                            <constraint firstItem="dcu-vf-cEt" firstAttribute="leading" secondItem="SpH-fp-ny5" secondAttribute="leadingMargin" id="NG7-5j-lMB"/>
+                            <constraint firstItem="Ua0-on-2Is" firstAttribute="leading" secondItem="SpH-fp-ny5" secondAttribute="leadingMargin" id="OF3-oC-6sf"/>
+                            <constraint firstItem="u86-ku-6s2" firstAttribute="top" secondItem="mCi-WE-7te" secondAttribute="bottom" constant="20" id="PcQ-Cm-b2I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dcu-vf-cEt" secondAttribute="trailing" id="cgK-WM-Mrm"/>
+                            <constraint firstItem="Ua0-on-2Is" firstAttribute="trailing" secondItem="SpH-fp-ny5" secondAttribute="trailingMargin" id="ewJ-St-WEa"/>
+                            <constraint firstItem="2ZH-cb-SP0" firstAttribute="top" secondItem="SpH-fp-ny5" secondAttribute="top" id="fMq-lQ-GYh"/>
+                            <constraint firstItem="mCi-WE-7te" firstAttribute="leading" secondItem="SpH-fp-ny5" secondAttribute="leadingMargin" id="goH-4l-6k8"/>
+                            <constraint firstItem="2ZH-cb-SP0" firstAttribute="leading" secondItem="SpH-fp-ny5" secondAttribute="leading" id="hqD-19-Hsd"/>
+                            <constraint firstItem="mCi-WE-7te" firstAttribute="trailing" secondItem="SpH-fp-ny5" secondAttribute="trailingMargin" id="nPh-EE-qk8"/>
+                            <constraint firstItem="dcu-vf-cEt" firstAttribute="top" secondItem="2ZH-cb-SP0" secondAttribute="bottom" constant="15" id="xld-wt-8gw"/>
+                            <constraint firstAttribute="trailing" secondItem="2ZH-cb-SP0" secondAttribute="trailing" id="z73-Pj-KvK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descLbl" destination="Ua0-on-2Is" id="vwb-HP-Tku"/>
+                        <outlet property="titleLbl" destination="dcu-vf-cEt" id="VN1-aE-ai0"/>
+                        <outlet property="webView" destination="2ZH-cb-SP0" id="9g5-3S-odc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8b-45-dzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858.39999999999998" y="99.400299850074973"/>
         </scene>
     </scenes>
 </document>
